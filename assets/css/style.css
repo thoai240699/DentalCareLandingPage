@@ -10,3 +10,36 @@ body {
   font-family: sora, sans-serif;
   font-size: 1.6rem;
 }
+.container {
+  width: 1170px;
+  margin: auto;
+}
+.hero {
+  min-width: 1440px;
+  height: 800px;
+  background: var(--color-primary);
+}
+.top-hero {
+  display: flex;
+  position: relative;
+  padding-top: 36px;
+}
+.top-hero__logo {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.top-hero__desc-top {
+  margin-left: 6px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.top-hero__desc-bottom {
+  position: absolute;
+  left: 53px;
+  top: 53px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
