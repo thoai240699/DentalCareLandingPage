@@ -30,20 +30,41 @@
       href="./assets/favicon/apple-touch-icon.png"
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-    <!-- Scripts-->
-    <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="header-top">
-          <div class="logo">
+          <!-- Logo -->
+          <a href="/" class="logo">
             <span class="logo__cirle"></span>
             <div class="logo__slogan">
               <p class="logo__slogan--top">shine</p>
               <p class="logo__slogan--bottom">smile</p>
             </div>
+          </a>
+          <!-- navigation -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--active" href="#!">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#!">Services</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#!">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#!">Doctors</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Action -->
+          <div class="action">
+            <a class="action__login" href="#!">Log In</a>
+            <button href="#!" class="btn action__sign-up">Sign Up</button>
           </div>
         </div>
       </div>
