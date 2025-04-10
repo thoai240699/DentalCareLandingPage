@@ -9,6 +9,8 @@
 body {
   font-family: sora, sans-serif;
   font-size: 1.6rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
 }
 /* Common */
 a {
@@ -97,7 +99,7 @@ a {
 .nav__list {
   display: flex;
 }
-.action__login,
+
 .nav__link {
   color: #c9d2da;
   font-weight: 300;
@@ -114,13 +116,20 @@ a {
   left: -6px;
   top: -2px;
 }
+.header-action__login:hover,
+.header-action__sign-up:hover,
 .nav__link:hover,
 .nav__link--active {
   color: #fff;
   text-shadow: 0.5px 0 0 currentColor;
 }
-/* Action */
-.action__sign-up {
+/* header-action */
+.header-action__login {
+  color: #c9d2da;
+  font-weight: 300;
+  padding: 4px 28px;
+}
+.header-action__sign-up {
   --height: 44px;
   min-width: 104px;
   font-size: 1.6rem;
