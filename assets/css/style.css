@@ -5,16 +5,11 @@
   font-size: 62.5%;
   --color-primary: #10375c;
   --color-secondary: #2e80ce;
-  /* Định nghĩa các biến cho transition */
-  --transition-duration: 0.3s;
-  --transition-timing: ease-in-out;
+  --color-desc: #575f66;
 }
 body {
   font-family: sora, sans-serif;
   font-size: 1.6rem;
-  transition: border-color var(--transition-duration) var(--transition-timing),
-    box-shadow var(--transition-duration) var(--transition-timing),
-    background-color var(--transition-duration) var(--transition-timing);
 }
 /* Common */
 a {
@@ -42,14 +37,13 @@ a {
   cursor: pointer;
 }
 .container {
-  width: 1170px;
-  max-width: calc(100% - 48px);
+  /* width: 1170px;
+  max-width: calc(100% - 48px); */
+  width: max(1170px, 100vh - 48px);
   margin: 0 auto;
 }
 /* Header */
 .header {
-  /* Sets the padding-top to 3.75% of the viewport height for responsive spacing */
-  /* padding-top: calc(100vh * (30 / 800)); */
   padding-top: 30px;
   min-height: 100vh;
   background-color: var(--color-primary);
@@ -66,19 +60,19 @@ a {
   display: inline-flex;
   font-size: 1rem;
 }
-.logo__cirle::before,
-.logo__cirle::after {
+.logo__circle::before,
+.logo__circle::after {
   content: "";
   display: inline-flex;
   border-radius: 50%;
 }
-.logo__cirle::before {
+.logo__circle::before {
   /* 1 em = 10px */
   width: 3em;
   height: 3em;
   background-color: var(--color-secondary);
 }
-.logo__cirle::after {
+.logo__circle::after {
   width: 1.6em;
   height: 1.6em;
   background-color: #fff;
@@ -120,8 +114,8 @@ a {
   left: -6px;
   top: -2px;
 }
-/* Thêm focus styles cho keyboard navigation */
-.nav__link:focus-visible {
+/* Thêm focus styles cho key    board navigation */
+.nav__link:focus {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
 }
@@ -132,7 +126,7 @@ a {
   color: #fff;
   text-shadow: 0.5px 0 0 currentColor;
   /* Thêm transition cho mượt mà */
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 /* header-action */
 /* Loại khoảng trắng thừa do 2 thẻ inline có dấu xuống dòng */
@@ -210,4 +204,81 @@ a {
 .hero__img:last-child {
   width: 210px;
   height: 410px;
+}
+/* Services */
+.services {
+  margin-top: 170px;
+}
+.section-title {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2; /* 120% */
+  letter-spacing: -0.02em;
+}
+.section-desc {
+  color: var(--color-desc);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.66; /* 166.667% */
+}
+.services__row {
+  display: flex;
+  margin-top: 70px;
+}
+.services__img {
+  width: 570px;
+  height: 570px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.services__content {
+  flex-basis: 40.17%;
+  margin-left: auto;
+  align-self: center;
+}
+/* Services list */
+.services__list {
+  margin-bottom: 90px;
+}
+.services__item {
+  display: flex;
+  margin-bottom: 40px;
+}
+.services__circle {
+  display: flex;
+  flex-shrink: 0;
+  background-color: #eff6fd;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.services__icon {
+  margin: auto;
+}
+.services__item:hover .services__circle,
+.services__item:first-of-type .services__circle {
+  background-color: var(--color-secondary);
+}
+.services__item:hover .services__icon-path,
+.services__item:first-of-type .services__icon-path {
+  fill: white;
+}
+
+.list-content {
+  margin-left: 19px;
+}
+.services__item-title {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.services__item-desc {
+  color: var(--color-desc);
+  font-weight: 300;
+  line-height: 1.75; /* 175% */
 }
