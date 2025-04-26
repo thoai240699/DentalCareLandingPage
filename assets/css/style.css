@@ -33,8 +33,9 @@ a {
   text-align: center;
 }
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .container {
   /* width: 1170px;
@@ -118,6 +119,7 @@ a {
 .nav__link:focus {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
+  transition: 0.5s ease;
 }
 .header-action__login:hover,
 .header-action__sign-up:hover,
@@ -126,7 +128,7 @@ a {
   color: #fff;
   text-shadow: 0.5px 0 0 currentColor;
   /* Thêm transition cho mượt mà */
-  transition: all 0.5s ease;
+  transition: 0.5s ease;
 }
 /* header-action */
 /* Loại khoảng trắng thừa do 2 thẻ inline có dấu xuống dòng */
@@ -207,22 +209,29 @@ a {
 }
 /* Services */
 .services {
-  margin-top: 170px;
+  padding: 170px 0;
 }
 .section-title {
   color: var(--color-primary);
-  text-align: center;
   font-size: 5rem;
   font-weight: 600;
   line-height: 1.2; /* 120% */
   letter-spacing: -0.02em;
 }
+.services__title {
+  margin: 0 auto;
+  text-align: center;
+}
 .section-desc {
   color: var(--color-desc);
-  text-align: center;
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.66; /* 166.667% */
+}
+.services__desc {
+  margin: 0 auto;
+  text-align: center;
+  width: min(468px, 100vw);
 }
 .services__row {
   display: flex;
@@ -245,27 +254,30 @@ a {
 }
 .services__item {
   display: flex;
-  margin-bottom: 40px;
+  width: min(470px, 100vw);
+  padding: 22px;
 }
-.services__circle {
+.services__item:hover {
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+  transition: 0.5s ease;
+}
+.services__item:hover .services__icon {
+  background-color: var(--color-secondary);
+  color: #fff;
+  transition: 0.5s ease;
+}
+.services__icon {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
   background-color: #eff6fd;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
   width: 60px;
   height: 60px;
   border-radius: 50%;
-}
-
-.services__icon {
-  margin: auto;
-}
-.services__item:hover .services__circle,
-.services__item:first-of-type .services__circle {
-  background-color: var(--color-secondary);
-}
-.services__item:hover .services__icon-path,
-.services__item:first-of-type .services__icon-path {
-  fill: white;
 }
 
 .list-content {
