@@ -343,3 +343,6 @@ a {
   border-color: var(--color-secondary);
   transition: 0.4s ease;
 }
+.works-item:hover .works-item__icon {
+  color: var(--color-secondary);
+}
